@@ -60,7 +60,7 @@ jobs:
             script: ./gradlew connectedCheck --stacktrace
       
       - name: Unit Test   
-        run: ./gradlew testDebugUnitTest
+        run: ./gradlew jacocoTestReport
        
 
       - name: generate report
