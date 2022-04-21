@@ -74,4 +74,8 @@ task installGitHook(type: Copy) {
     fileMode 0744
 }
 
+tasks.withType(Test) {
+    exclude '**/DefaultActiveSpeakerDetectorTest/`DefaultActiveSpeakerDetector should show active speakers scores`'
+}
+
 tasks.getByPath(':app:preBuild').dependsOn installGitHook

@@ -133,22 +133,22 @@ class DefaultActiveSpeakerDetectorTest {
         }
     }
 
-//    @Test
-//    fun `DefaultActiveSpeakerDetector should show active speakers scores`() {
-//        activeSpeakerDetector.addActiveSpeakerObserver(
-//            activeSpeakerPolicy,
-//            activeSpeakerObserverWithScore1
-//        )
-//        activeSpeakerDetector.onAttendeesJoined(arrayOf(testAttendeeInfo1))
-//        Thread.sleep(500)
-//        activeSpeakerDetector.removeActiveSpeakerObserver(activeSpeakerObserverWithScore1)
-//
-//        verify(exactly = 2) {
-//            activeSpeakerObserverWithScore1.onActiveSpeakerScoreChanged(
-//                mutableMapOf(testAttendeeInfo1 to 0.0)
-//            )
-//        }
-//    }
+    @Test
+    fun `DefaultActiveSpeakerDetector should show active speakers scores`() {
+        activeSpeakerDetector.addActiveSpeakerObserver(
+            activeSpeakerPolicy,
+            activeSpeakerObserverWithScore1
+        )
+        activeSpeakerDetector.onAttendeesJoined(arrayOf(testAttendeeInfo1))
+        Thread.sleep(500)
+        activeSpeakerDetector.removeActiveSpeakerObserver(activeSpeakerObserverWithScore1)
+
+        verify(exactly = 2) {
+            activeSpeakerObserverWithScore1.onActiveSpeakerScoreChanged(
+                mutableMapOf(testAttendeeInfo1 to 0.0)
+            )
+        }
+    }
 //
 //    @Test
 //    fun `DefaultActiveSpeakerDetector should send active speakers scores to each observer`() {
