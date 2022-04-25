@@ -75,7 +75,7 @@ task installGitHook(type: Copy) {
 }
 
 tasks.withType(Test) {
-    exclude '/amazon-chime-sdk/src/test/java/com/amazonaws/services/chime/sdk/meetings/audiovideo/audio/activespeakerdetector/DefaultActiveSpeakerDetectorTest'
+    exclude 'com/amazonaws/services/chime/sdk/meetings/audiovideo/audio/activespeakerdetector/DefaultActiveSpeakerDetectorTest.class'
 }
 
 tasks.getByPath(':app:preBuild').dependsOn installGitHook
