@@ -118,6 +118,10 @@ task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest']) {
     executionData.setFrom(fileTree(dir: "$buildDir", includes: ["jacoco/testDebugUnitTest.exec"]))
 }
 
+tasks.withType(Test) {
+    exclude "com.amazonaws.services.chime.sdk.meetings.audiovideo.audio.activespeakerdetector.DefaultActiveSpeakerDetectorTest"
+}
+
 private Integer generateVersionCode() {
     return project.ext.chimeMinSdkVersion * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
 }
