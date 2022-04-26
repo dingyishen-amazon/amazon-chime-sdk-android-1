@@ -14,6 +14,7 @@ import io.mockk.MockKAnnotations
 import io.mockk.impl.annotations.MockK
 import io.mockk.spyk
 import io.mockk.verify
+import junit.framework.Assert.assertEquals
 import junit.framework.Assert.assertNotNull
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
@@ -93,6 +94,11 @@ class DefaultActiveSpeakerDetectorTest {
     @Test
     fun `DefaultActiveSpeakerDetector should not be null`() {
         assertNotNull(activeSpeakerDetector)
+    }
+
+    @Test
+    fun `Will fail`() {
+        assertEquals(1.0, 2.0)
     }
 
     @Test
