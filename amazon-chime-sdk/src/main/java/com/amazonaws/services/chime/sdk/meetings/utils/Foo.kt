@@ -8,8 +8,12 @@ class Foo {
         /**
          * Return current version of Amazon Chime SDK for Android.
          */
-        fun foo(): Boolean {
+        fun returnTrue(): Boolean {
             return true
+        }
+
+        fun returnFalse(): Boolean {
+            return false
         }
     }
 }
